@@ -28,8 +28,6 @@ static t_stack	*fill_stack(char **argv)
 	t_stack		*a;
 
 	a = create_stack();
-	if (!a)
-		return (NULL);
 	i = 0;
 	while (argv[++i])
 	{
@@ -41,17 +39,17 @@ static t_stack	*fill_stack(char **argv)
 	return (a);
 }
 
-static int	has_duplicate(t_stack *st)
+static int	has_duplicate(t_stack *s)
 {
 	t_node	*tmp;
 	t_node	*current;
 	int	occurences;
 
-	current = st->head;
+	current = s->head;
 	while (current)
 	{
 		occurences = 0;
-		tmp = st->head;
+		tmp = s->head;
 		while (tmp)
 		{
 			if (current->nb == tmp->nb)

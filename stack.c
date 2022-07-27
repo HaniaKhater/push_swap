@@ -26,41 +26,35 @@ t_node	*create_node(int nb)
 	return (new);
 }
 
-t_stack	*add_node_back(t_stack *s, int nb)
+void	*add_node_back(t_stack *s, int nb)
 {
 	t_node	*tmp;
+	t_node	*new;
 
-	tmp = create_node(val);
-	if (!tmp)
-		error();
+	new = create_node(nb);
+	if (s->head)
+	{
+		tmp = *s->head;
+		while (tmp->next)
+			tmp = tmp->next;
+		tmp->next = *new;
+		new->next = NULL; 
+	}
+	else
+		*s->head = new;
 }
 
-
-\\\\\\\\\\\\\\\\\\\\ lst utils /////////////////////
-
-
-void            add_node_back(t_node **anode, t_node *new)
+void	*add_node_front(t_stack *s, int nb)
 {
-        t_element       *tmp;
+	t_node	*tmp;
+	t_node	*new;
 
-        if (*anode)
-        {
-                tmp = *anode;
-                while (tmp->next)
-                        tmp = tmp->next;
-                tmp->next = new;
-                new->next = 0;
-        }
-        else
-                *anode = new;
+	new = create_node(nb);
+	if (s->head)
+	{
+		new->next = *s->head;
+		*s->head = new;
+	}
+	else
+		*s->head = new;
 }
-
-void            add_node_back(t_node **aelem, t_node *new)
-{
-        if (anode)
-                new->next = *alst;
-        else
-                new->next = 0;
-        *anode = new;
-}
-
