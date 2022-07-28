@@ -42,7 +42,13 @@ void	*add_node_back(t_stack *s, int nb)
 	}
 	else
 		*s->head = new;
+	s->size++;
 }
+
+
+
+////   unnecessary?
+
 
 void	*add_node_front(t_stack *s, int nb)
 {
@@ -57,4 +63,5 @@ void	*add_node_front(t_stack *s, int nb)
 	}
 	else
 		*s->head = new;
+	s->size++;
 }

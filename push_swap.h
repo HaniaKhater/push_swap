@@ -39,4 +39,18 @@ void		error(void);
 **	atoll.c
 */
 
-		long long	t_atoll(const char *str);
+long long	t_atoll(const char *str);
+
+void	swap(t_stack *s);
+void	ss(t_stack *a, t_stack *b);
+
+void	push(t_stack *s);
+
+void	rotate(t_stack *s);
+void	rr(t_stack *a, t_stack *b);
+
+void	reverse_rotate(t_stack *s);
+void	rrr(t_stack *a, t_stack *b);
+
+
+

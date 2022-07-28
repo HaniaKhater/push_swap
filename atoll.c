@@ -7,12 +7,11 @@ long long	ft_atoll(const char *str)
 	i = 0;
 	sign = 1;
 	nb = 0;
-	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32 || str[i] == '+')
 		i++;
-	if (str[i] == '-' || str[i] == '+')
+	while (str[i] == '-')
 	{
-		if (str[i] == '-')
-			sign *= -1;
+		sign *= -1;
 		i++;
 	}
 	while (str[i] && (str[i] >= '0' && str[i] <= '9'))
