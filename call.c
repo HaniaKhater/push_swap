@@ -1,6 +1,6 @@
 #include "push_swap.h"
 
-void    perform(char *cmd, t_stack *a, t_stack *b)
+static void    perform(char *cmd, t_stack *a, t_stack *b)
 {
     if (strcmp(cmd, "sa"))
         swap(a);

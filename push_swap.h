@@ -52,6 +52,8 @@ void	rr(t_stack *a, t_stack *b);
 void	reverse_rotate(t_stack *s);
 void	rrr(t_stack *a, t_stack *b);
 
+void    call(char *cmd, t_stack *a, t_stack *b);
+
 void	sort2(t_stack *a);
 void	sort3(t_stack *a);
 void	sort5(t_stack *a, t_stack *b);

@@ -1,26 +1,21 @@
 #include "push_swap.h"
 
-void    sort2(t_stack *a)
-{
-    swap(a);
-}
-
 void    sort3(t_stack *a)
 {
     if (a->head > a->head->next && a->head < a->tail && a->head->next < a->tail)
-        swap(a);
+        call("sa", a, b);
     if (a->head > a->head->next && a->head > a->tail && a->head->next < a->tail)
-        rotate(a);
+        call("ra", a, b);
     if (a->head < a->head->next && a->head > a->tail && a->head->next > a->tail)
-        reverse_rotate(a);
+        call("rra", a, b);
     if (a->head < a->head->next && a->head < a->tail && a->head->next > a->tail)
     {
-        swap(a);
-        rotate(a);
+        call("sa", a, b);
+        call("ra", a, b);
     }
     if (a->head > a->head->next && a->head > a->tail && a->head->next > a->tail)
     {
-        swap(a);
-        rotate(a);
+        call("sa", a, b);
+        call("rra", a, b);
     }
 }

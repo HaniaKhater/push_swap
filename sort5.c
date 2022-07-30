@@ -69,26 +69,26 @@ void    pb_min_max(t_stack *a, t_stack *b)
     while (a->head < max)
     {   
         if (pos_max < 4)
-            rotate(a);
+            call("ra", a, b);
         else
-            rrotate(a);
+            call("rra", a, b);
     }
-    push(a, b);
+    call("pb", a, b);
     while (a->head > min)
     {
         if (pos_min < 3)
-            rotate(a);
+            call("ra", a, b);
         else
-            rrotate(a);
+            call("rra", a, b);
     }
-    push(a, b);
+    call("pb", a, b);
 }
 
 void    sort5(t_stack *a, t_stack *b)
 {
     pb_min_max(a, b);
     sort3(a);
-    push(b, a);
-    push(b, a);
-    rotate(a);
+    call("pa", a, b);
+    call("pa", a, b);
+    call("ra", a, b);
 }
