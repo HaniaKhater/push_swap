@@ -39,9 +39,10 @@ void	*add_node_back(t_stack *s, int nb)
 			tmp = tmp->next;
 		tmp->next = *new;
 		new->next = NULL; 
+		s->tail = *new;
 	}
 	else
-		*s->head = new;
+		s->head = *new;
 	s->size++;
 }
 
