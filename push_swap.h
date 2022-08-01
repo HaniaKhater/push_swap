@@ -62,3 +62,5 @@ int     *fill_array(t_stack *s);
 int     array_len(int *arr);
 int     *sort_array(int *arr);
 
+void	push_percentile(t_stack *a, t_stack *b);
+

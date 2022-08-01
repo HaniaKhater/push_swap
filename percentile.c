@@ -1,6 +1,6 @@
 #include "push_swap.h"
 
-int     find_cutoff(t_stack *s)
+static int     find_cutoff(t_stack *s)
 {
     int     len;
     int     index;
@@ -19,4 +19,22 @@ int     find_cutoff(t_stack *s)
     return (cutoff);
 }
 
-void    push_percentile()
+void            push_percentile(t_stack *a, t_stack *b)
+{
+    int     cutoff;
+    t_node  tmp;
+
+    while (a->head)
+    {
+        tmp = a->head;
+        cutoff = find_cutoff(a);
+        while (a->size)
+        {
+            if (tmp->nb <= cutoff)
+                call("pb", a, b);
+            else
+                call("ra", a, b);
+        }
+        
+    }
+}
