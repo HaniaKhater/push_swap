@@ -54,6 +54,9 @@ void	rrr(t_stack *a, t_stack *b);
 
 void    call(char *cmd, t_stack *a, t_stack *b);
 
+int     find_max(t_stack *s);
+int     find_position(int nb, t_stack *s);
+
 void	sort2(t_stack *a);
 void	sort3(t_stack *a);
 void	sort5(t_stack *a, t_stack *b);

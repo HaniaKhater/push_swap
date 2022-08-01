@@ -1,6 +1,6 @@
 #include "push_swap.h"
 
-int     find_min(t_stack *s)
+static int     find_min(t_stack *s)
 {
     t_node  tmp;
     int     min;
@@ -18,7 +18,7 @@ int     find_min(t_stack *s)
     return (min);
 }
 
-int     find_max(t_stack *s)
+int             find_max(t_stack *s)
 {
     t_node  tmp;
     int     max;
@@ -36,7 +36,7 @@ int     find_max(t_stack *s)
     return (max);
 }
 
-int     find_position(int nb, t_stack *s)
+int             find_position(int nb, t_stack *s)
 {
     int     pos;
     t_node  tmp;
@@ -55,7 +55,7 @@ int     find_position(int nb, t_stack *s)
     return (-1);
 }
 
-void    pb_min_max(t_stack *a, t_stack *b)
+void            pb_min_max(t_stack *a, t_stack *b)
 {
     int     min;
     int     max;
@@ -84,7 +84,7 @@ void    pb_min_max(t_stack *a, t_stack *b)
     call("pb", a, b);
 }
 
-void    sort5(t_stack *a, t_stack *b)
+void            sort5(t_stack *a, t_stack *b)
 {
     pb_min_max(a, b);
     sort3(a);
