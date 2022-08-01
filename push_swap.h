@@ -58,5 +58,7 @@ void	sort2(t_stack *a);
 void	sort3(t_stack *a);
 void	sort5(t_stack *a, t_stack *b);
 
-
+int     *fill_array(t_stack *s);
+int     array_len(int *arr);
+int     *sort_array(int *arr);
 
