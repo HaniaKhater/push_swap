@@ -21,4 +21,5 @@ int	main(int argc, char **argv)
 		sort5(a, b);
 	else
 		percentile_sort(a, b);
+	return (0);
 }
