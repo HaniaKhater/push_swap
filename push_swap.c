@@ -3,7 +3,7 @@
 int	main(int argc, char **argv)
 {
 	t_stack	*a;
-	t_stack *b;
+	t_stack	*b;
 
 	if (argc == 1)
 		return (0);

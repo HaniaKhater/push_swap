@@ -1,24 +1,24 @@
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-#include <stdlib.h>
-#include <unistd.h>
+# include <stdlib.h>
+# include <unistd.h>
 
 typedef struct s_node
 {
 	int		nb;
-	struct s_node	*next;
+	t_node	*next;
 }		t_node;
 
 typedef struct s_stack
 {
 	t_node	*head;
 	t_node	*tail;
-	int	size;
+	int		size;
 }		t_stack;
 
 
-int	is_sorted(t_stack *s);
+int			is_sorted(t_stack *s);
 /*
 **	stack.c
 */
@@ -43,32 +43,32 @@ void		error(void);
 
 long long	t_atoll(const char *str);
 
-void	swap(t_stack *s);
-void	ss(t_stack *a, t_stack *b);
+void		swap(t_stack *s);
+void		ss(t_stack *a, t_stack *b);
 
-void	push(t_stack *s);
+void		push(t_stack *s);
 
-void	rotate(t_stack *s);
-void	rr(t_stack *a, t_stack *b);
+void		rotate(t_stack *s);
+void		rr(t_stack *a, t_stack *b);
 
-void	reverse_rotate(t_stack *s);
-void	rrr(t_stack *a, t_stack *b);
+void		reverse_rotate(t_stack *s);
+void		rrr(t_stack *a, t_stack *b);
 
-void    call(char *cmd, t_stack *a, t_stack *b);
+void		call(char *cmd, t_stack *a, t_stack *b);
 
-int     find_max(t_stack *s);
-int     find_position(int nb, t_stack *s);
+int			find_max(t_stack *s);
+int			find_position(int nb, t_stack *s);
 
-void	sort2(t_stack *a);
-void	sort3(t_stack *a);
-void	sort5(t_stack *a, t_stack *b);
+void		sort2(t_stack *a);
+void		sort3(t_stack *a);
+void		sort5(t_stack *a, t_stack *b);
 
-int     *fill_array(t_stack *s);
-int     array_len(int *arr);
-int     *sort_array(int *arr);
+int			*fill_array(t_stack *s);
+int			array_len(int *arr);
+int			*sort_array(int *arr);
 
-void	push_percentile(t_stack *a, t_stack *b);
+void		push_percentile(t_stack *a, t_stack *b);
 
-void    push_max(t_stack *a, t_stack *b);
+void		push_max(t_stack *a, t_stack *b);
 
 #endif
