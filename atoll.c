@@ -26,7 +26,7 @@ long long	ft_atoll(const char *str)
 	return (nb);
 }
 
-int	ft_strcmp(const char *s1, const char *s2)
+int	ft_ft_strcmp(const char *s1, const char *s2)
 {
 	int		i;
 

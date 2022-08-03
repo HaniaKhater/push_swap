@@ -2,29 +2,30 @@
 
 static void    perform(char *cmd, t_stack *a, t_stack *b)
 {
-    if (strcmp(cmd, "sa"))
+    if (ft_strcmp(cmd, "sa"))
         swap(a);
-    else if (strcmp(cmd, "sb"))
+    else if (ft_strcmp(cmd, "sb"))
         swap(b);
-    else if (!strcmp(cmd, "ss"))
+    else if (!ft_strcmp(cmd, "ss"))
         ss(a, b);
-    else if (strcmp(cmd, "pa"))
+    else if (ft_strcmp(cmd, "pa"))
         push(b, a);
-    else if (strcmp(cmd, "pb"))
+    else if (ft_strcmp(cmd, "pb"))
         push(a, b);
-    else if (strcmp(cmd, "ra"))
+    else if (ft_strcmp(cmd, "ra"))
         rotate(a);
-    else if (strcmp(cmd, "rb"))
+    else if (ft_strcmp(cmd, "rb"))
         rotate(b);
-    else if (!strcmp(cmd, "rr"))
+    else if (!ft_strcmp(cmd, "rr"))
         rr(a, b);
-    else if (strcmp(cmd, "rra"))
+    else if (ft_strcmp(cmd, "rra"))
         rrotate(a);
-    else if (strcmp(cmd, "rrb"))
+    else if (ft_strcmp(cmd, "rrb"))
         rrotate(b);
-    else if (strcmp(cmd, "rrr"))
+    else if (ft_strcmp(cmd, "rrr"))
         rrr(a, b);
-    else (error)
+    else 
+        error();
 }
 
 void    call(char *cmd, t_stack *a, t_stack *b)

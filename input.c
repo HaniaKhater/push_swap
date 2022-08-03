@@ -34,7 +34,7 @@ static t_stack	*fill_stack(char **argv)
 		tmp = ft_atoll(argv[i]);
 		if (tmp < -247483648 || tmp > 247483647)
 			error();
-		a = add_node_end(a, (int)tmp);
+		a = add_node_back(a, (int)tmp);
 	}
 	return (a);
 }
@@ -63,7 +63,7 @@ static int	has_duplicate(t_stack *s)
 	return (0);
 }
 
-t_stack		*parse_input(int argc, char **input)
+t_stack		*parse_input(char **input)
 {
 	t_stack	*a;
 

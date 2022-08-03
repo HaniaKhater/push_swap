@@ -13,7 +13,7 @@ static int     find_cutoff(t_stack *s)
     if (len >= 500)
         index = len / 7;
     else
-        index = size / 5;
+        index = len / 5;
     cutoff = arr[index];
     free(arr);
     return (cutoff);
@@ -22,7 +22,7 @@ static int     find_cutoff(t_stack *s)
 void            push_percentile(t_stack *a, t_stack *b)
 {
     int     cutoff;
-    t_node  tmp;
+    t_node  *tmp;
 
     while (a->head)
     {

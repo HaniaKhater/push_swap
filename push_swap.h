@@ -6,8 +6,8 @@
 
 typedef struct s_node
 {
-	int		nb;
-	t_node	*next;
+	int				nb;
+	struct s_node	*next;
 }		t_node;
 
 typedef struct s_stack
@@ -24,12 +24,13 @@ int			is_sorted(t_stack *s);
 */
 
 t_stack		*create_stack(void);
+void		*add_node_back(t_stack *s, int nb);
 
 /*
 **	input.c
 */
 
-t_stack		*parse_input(int argc, char **input);
+t_stack		*parse_input(char **input);
 
 /*
 **	error.c
@@ -41,17 +42,19 @@ void		error(void);
 **	atoll.c
 */
 
-long long	t_atoll(const char *str);
+long long	ft_atoll(const char *str);
+int			ft_strcmp(const char *s1, const char *s2);
+void		ft_putstr(char *str);
 
 void		swap(t_stack *s);
 void		ss(t_stack *a, t_stack *b);
 
-void		push(t_stack *s);
+void		push(t_stack *src, t_stack *dst);
 
 void		rotate(t_stack *s);
 void		rr(t_stack *a, t_stack *b);
 
-void		reverse_rotate(t_stack *s);
+void		rrotate(t_stack *s);
 void		rrr(t_stack *a, t_stack *b);
 
 void		call(char *cmd, t_stack *a, t_stack *b);
