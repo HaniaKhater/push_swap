@@ -69,3 +69,4 @@ void	push_percentile(t_stack *a, t_stack *b);
 
 void    push_max(t_stack *a, t_stack *b);
 
+#endif

@@ -3,13 +3,13 @@
 int     *fill_array(t_stack *s)
 {
     int     i;
-    t_node  tmp;
+    t_node  *tmp;
     int     *arr;
 
     i = 0;
     tmp = s->head;
     arr = malloc(sizeof(int) * s->size + 1);
-    if (!tab)
+    if (!arr)
         return (NULL);
     while (tmp->next)
     {
@@ -22,7 +22,7 @@ int     *fill_array(t_stack *s)
         arr[i] = tmp->nb;
         i++;
     }
-    arr[i] = '/0';
+    arr[i] = '\0';
     return (arr);
     // error if empty?
 }
@@ -49,7 +49,7 @@ int     *sort_array(int *arr)
     while (i < len)
     {
         j = i + 1;
-        while (j < n)
+        while (j < len)
         {
             if (arr[i] > number[j])
             {
