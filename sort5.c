@@ -2,7 +2,7 @@
 
 static int     find_min(t_stack *s)
 {
-    t_node  tmp;
+    t_node  *tmp;
     int     min;
 
     tmp = s->head;
@@ -20,7 +20,7 @@ static int     find_min(t_stack *s)
 
 int             find_max(t_stack *s)
 {
-    t_node  tmp;
+    t_node  *tmp;
     int     max;
 
     tmp = s->head;
@@ -39,7 +39,7 @@ int             find_max(t_stack *s)
 int             find_position(int nb, t_stack *s)
 {
     int     pos;
-    t_node  tmp;
+    t_node  *tmp;
 
     pos = 1;
     tmp = s->head;

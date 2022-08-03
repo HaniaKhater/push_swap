@@ -1,3 +1,5 @@
+#include "push_swap.c"
+
 long long	ft_atoll(const char *str)
 {
 	int		i;
@@ -44,7 +46,7 @@ void	ft_putsr(char *str)
 {
 	while(*str)
 	{
-		write(1, str, 1);
+		write(1, &str, 1);
 		str++;
 	}
 }

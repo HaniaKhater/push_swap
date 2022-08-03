@@ -4,19 +4,21 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-typedef struct	s_node
+typedef struct s_node
 {
 	int		nb;
 	struct s_node	*next;
 }		t_node;
 
-typedef struct	s_stack
+typedef struct s_stack
 {
 	t_node	*head;
 	t_node	*tail;
 	int	size;
 }		t_stack;
 
+
+int	is_sorted(t_stack *s);
 /*
 **	stack.c
 */

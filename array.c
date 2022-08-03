@@ -51,7 +51,7 @@ int     *sort_array(int *arr)
         j = i + 1;
         while (j < len)
         {
-            if (arr[i] > number[j])
+            if (arr[i] > arr[j])
             {
                 swap = arr[i];
                 arr[i] = arr[j];

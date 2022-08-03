@@ -12,7 +12,7 @@ int	main(int argc, char **argv)
 		return (0);
 	b = create_stack();
 	if (!b)
-		return (NULL);
+		return (0);
 	if (a->size == 2)
 		call("sa", a, b);
 	if (a->size == 3)
@@ -20,6 +20,6 @@ int	main(int argc, char **argv)
 	if (a->size == 5)
 		sort5(a, b);
 	else
-		percentile_sort(a, b);
+		push_percentile(a, b);
 	return (0);
 }

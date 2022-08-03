@@ -4,7 +4,7 @@ static int	only_nbs(char **argv)
 {
 	int		i;
 	int		j;
-	char		c;
+	char	c;
 
 	i = 0;
 	while (argv[++i])
