@@ -6,14 +6,14 @@ static int	only_nbs(char **argv)
 	int		j;
 	char	c;
 
-	i = 0;
+	i = -1;
 	while (argv[++i])
 	{
-		j = -1;
+		j = 0;
 		while (argv[i][++j])
 		{
 			c = argv[i][j];
-			if (!(c >= '0' && c <= '9') || 
+			if (!(c >= '0' && c <= '9') ||
 				c != '-' || c != ' ')
 				return (0);
 		}
@@ -70,9 +70,17 @@ t_stack		*parse_input(char **input)
 	//maybe handle argv == 2 seperately -> strsplit(input[0], ' ')
 	// maybe transfer input into rwx char ** & free it if not == input 
 	if (!(only_nbs(input)))
+	{
+		ft_putstr("not only numbers");
 		error();
+	}
+	ft_putstr("gonna fill stack");
 	a = fill_stack(input);
+	ft_putstr("filled stack");
 	if (!a || has_duplicate(a))
+	{
+		ft_putstr("no a or has duplicates");
 		error();
+	}
 	return (a);
 }

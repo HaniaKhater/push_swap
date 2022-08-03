@@ -31,7 +31,7 @@ OBJS 	=	${SRCS:.c=.o}
 		${CC} ${CFLAGS} -c $< -o $(<:.c=.o)
 
 ${NAME}:	$(OBJS)
-				$(CC) $(FLAGS) $(OBJS) -o $(NAME) -L ${INC}
+				$(CC) $(FLAGS) $(OBJS) -o $(NAME)
 
 all:		${NAME}
 
