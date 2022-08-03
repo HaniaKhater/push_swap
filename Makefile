@@ -7,10 +7,11 @@ RM 		=	rm -rf
 NAME	=	push_swap
 
 SRCS	=	./array.c\
-				./atoll.c\
 				./call.c\
 				./error.c\
 				./input.c\
+				./is_sorted.c\
+				./libft_utils\
 				./percentile.c\
 				./push_max.c\
 				./push_swap.c\

@@ -1,4 +1,4 @@
-#include "push_swap.c"
+#include "push_swap.h"
 
 long long	ft_atoll(const char *str)
 {
@@ -26,7 +26,7 @@ long long	ft_atoll(const char *str)
 	return (nb);
 }
 
-int	ft_ft_strcmp(const char *s1, const char *s2)
+int	ft_strcmp(const char *s1, const char *s2)
 {
 	int		i;
 
@@ -42,9 +42,9 @@ int	ft_ft_strcmp(const char *s1, const char *s2)
 	return (0);
 }
 
-void	ft_putsr(char *str)
+void	ft_putstr(char *str)
 {
-	while(*str)
+	while (*str)
 	{
 		write(1, &str, 1);
 		str++;

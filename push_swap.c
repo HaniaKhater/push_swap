@@ -7,7 +7,7 @@ int	main(int argc, char **argv)
 
 	if (argc == 1)
 		return (0);
-	a = parse_input(argc, &argv[1]);
+	a = parse_input(&argv[1]);
 	if (a->size == 1 || is_sorted(a))
 		return (0);
 	b = create_stack();
