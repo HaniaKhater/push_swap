@@ -1,13 +1,13 @@
 #include "push_swap.h"
 
-static void    put_max_top(t_stack *a, t_stack *b, int nb)
+static void    put_max_top(t_stack *a, t_stack *b, int max)
 {
     int     pos;
 
-    while (s->head != max)
+    while (b->head->nb != max)
     {
-        pos = find_position(max, s);
-        if (pos < s->size / 2)
+        pos = find_position(max, b);
+        if (pos < b->size / 2)
             call("rb", a, b);
         else
             call("rrb", a, b);
@@ -16,13 +16,12 @@ static void    put_max_top(t_stack *a, t_stack *b, int nb)
 
 void    push_max(t_stack *a, t_stack *b)
 {
-    // a is empty and b is roughly sorted
     int     max;
 
     while (b->head)
     {
         max = find_max(b);
-        put_node_top(b, max);
+        put_max_top(a, b, max);
         call("pa", a, b);
     }
 }

@@ -16,7 +16,7 @@ int	main(int argc, char **argv)
 	if (a->size == 2)
 		call("sa", a, b);
 	if (a->size == 3)
-		sort3(a);
+		sort3(a, b);
 	if (a->size == 5)
 		sort5(a, b);
 	else

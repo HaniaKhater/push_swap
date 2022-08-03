@@ -6,12 +6,14 @@ RM 		=	rm -rf
 
 NAME	=	push_swap
 
+INC		=	push_swap.h
+
 SRCS	=	./array.c\
 				./call.c\
 				./error.c\
 				./input.c\
 				./is_sorted.c\
-				./libft_utils\
+				./libft_utils.c\
 				./percentile.c\
 				./push_max.c\
 				./push_swap.c\
@@ -29,7 +31,7 @@ OBJS 	=	${SRCS:.c=.o}
 		${CC} ${CFLAGS} -c $< -o $(<:.c=.o)
 
 ${NAME}:	$(OBJS)
-				$(CC) $(FLAGS) $(OBJS) -o $(NAME) -L
+				$(CC) $(FLAGS) $(OBJS) -o $(NAME) -L ${INC}
 
 all:		${NAME}
 

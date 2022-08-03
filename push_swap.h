@@ -24,7 +24,7 @@ int			is_sorted(t_stack *s);
 */
 
 t_stack		*create_stack(void);
-void		*add_node_back(t_stack *s, int nb);
+void		add_node_back(t_stack *s, int nb);
 
 /*
 **	input.c
@@ -62,8 +62,7 @@ void		call(char *cmd, t_stack *a, t_stack *b);
 int			find_max(t_stack *s);
 int			find_position(int nb, t_stack *s);
 
-void		sort2(t_stack *a);
-void		sort3(t_stack *a);
+void		sort3(t_stack *a, t_stack *b);
 void		sort5(t_stack *a, t_stack *b);
 
 int			*fill_array(t_stack *s);

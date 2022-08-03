@@ -1,6 +1,6 @@
 #include "push_swap.h"
 
-void    sort3(t_stack *a)
+void    sort3(t_stack *a, t_stack *b)
 {
     if (a->head > a->head->next && a->head < a->tail && a->head->next < a->tail)
         call("sa", a, b);

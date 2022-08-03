@@ -45,12 +45,12 @@ int             find_position(int nb, t_stack *s)
     tmp = s->head;
     while (tmp->next)
     {
-        if (tmp->nb = nb)
+        if (tmp->nb == nb)
             return (pos);
         pos++;
         tmp = tmp->next;
     }
-    if (tmp->nb = nb)
+    if (tmp->nb == nb)
         return (pos);
     return (-1);
 }
@@ -64,9 +64,9 @@ void            pb_min_max(t_stack *a, t_stack *b)
 
     min = find_min(a);
     max = find_max(a);
-    pos_min = find_position(min);
-    pos_max = find_position(max);
-    while (a->head < max)
+    pos_min = find_position(min, a);
+    pos_max = find_position(max, a);
+    while (a->head->nb < max)
     {   
         if (pos_max < 4)
             call("ra", a, b);
@@ -74,7 +74,7 @@ void            pb_min_max(t_stack *a, t_stack *b)
             call("rra", a, b);
     }
     call("pb", a, b);
-    while (a->head > min)
+    while (a->head->nb > min)
     {
         if (pos_min < 3)
             call("ra", a, b);
@@ -87,7 +87,7 @@ void            pb_min_max(t_stack *a, t_stack *b)
 void            sort5(t_stack *a, t_stack *b)
 {
     pb_min_max(a, b);
-    sort3(a);
+    sort3(a, b);
     call("pa", a, b);
     call("pa", a, b);
     call("ra", a, b);
