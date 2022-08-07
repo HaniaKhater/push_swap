@@ -17,7 +17,6 @@ int	main(int argc, char **argv)
 	if (!b)
 		return (0);
 	print_stack(a);
-	ft_putnbr_fd(a->size, 1);
 	if (a->size == 2)
 		call("sa", a, b);
 	else if (a->size == 3)

@@ -1,20 +1,20 @@
 #include "push_swap.h"
 
-static int	only_nbs(char **argv)
+static int	only_nbs(char **av)
 {
 	int		i;
 	int		j;
 	char	c;
 
 	i = 0;
-	while (argv[++i])
+	while (av[++i])
 	{
-		j = 0;
-		while (argv[i][++j])
+		j =-1;
+		while (av[i][++j])
 		{
-			c = argv[i][j];
-			if (!(c >= '0' && c <= '9') ||
-				c != '-' || c != ' ')
+			c = av[i][j];
+			if (!(c >= '0' && c <= '9') &&
+				c != '-' && c != ' ')
 				return (0);
 		}
 	}
