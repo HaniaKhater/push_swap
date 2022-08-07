@@ -2,18 +2,21 @@
 
 void    sort3(t_stack *a, t_stack *b)
 {
-    if (a->head > a->head->next && a->head < a->tail && a->head->next < a->tail)
+    if ((a->head->nb > a->head->next->nb) && (a->head->nb < a->tail->nb) && (a->head->next->nb < a->tail->nb))
         call("sa", a, b);
-    if (a->head > a->head->next && a->head > a->tail && a->head->next < a->tail)
+    else if ((a->head->nb > a->head->next->nb) && (a->head->nb > a->tail->nb) && (a->head->next->nb < a->tail->nb))
+    {
+        ft_putstr("recognized right sort 3");
         call("ra", a, b);
-    if (a->head < a->head->next && a->head > a->tail && a->head->next > a->tail)
+    }
+    else if ((a->head->nb < a->head->next->nb) && (a->head->nb > a->tail->nb) && (a->head->next->nb > a->tail->nb))
         call("rra", a, b);
-    if (a->head < a->head->next && a->head < a->tail && a->head->next > a->tail)
+    else if ((a->head->nb < a->head->next->nb) && (a->head->nb < a->tail->nb) && (a->head->next->nb > a->tail->nb))
     {
         call("sa", a, b);
         call("ra", a, b);
     }
-    if (a->head > a->head->next && a->head > a->tail && a->head->next > a->tail)
+    else if ((a->head->nb > a->head->next->nb) && (a->head->nb > a->tail->nb) && (a->head->next->nb > a->tail->nb))
     {
         call("sa", a, b);
         call("rra", a, b);

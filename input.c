@@ -6,7 +6,7 @@ static int	only_nbs(char **argv)
 	int		j;
 	char	c;
 
-	i = -1;
+	i = 0;
 	while (argv[++i])
 	{
 		j = 0;
@@ -28,7 +28,7 @@ static t_stack	*fill_stack(char **argv)
 	t_stack		*a;
 
 	a = create_stack();
-	i = 0;
+	i = -1;
 	while (argv[++i])
 	{
 		tmp = ft_atoll(argv[i]);
@@ -74,9 +74,7 @@ t_stack		*parse_input(char **input)
 		ft_putstr("not only numbers");
 		error();
 	}
-	ft_putstr("gonna fill stack");
 	a = fill_stack(input);
-	ft_putstr("filled stack");
 	if (!a || has_duplicate(a))
 	{
 		ft_putstr("no a or has duplicates");

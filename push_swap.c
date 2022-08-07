@@ -8,20 +8,24 @@ int	main(int argc, char **argv)
 	if (argc == 1)
 		return (0);
 	a = parse_input(&argv[1]);
-	ft_putstr("input parsed");
 	if (a->size == 1 || is_sorted(a))
+	{
 		ft_putstr("size 1 or is sorted");
 		return (0);
+	}
 	b = create_stack();
 	if (!b)
 		return (0);
+	print_stack(a);
+	ft_putnbr_fd(a->size, 1);
 	if (a->size == 2)
 		call("sa", a, b);
-	if (a->size == 3)
+	else if (a->size == 3)
 		sort3(a, b);
-	if (a->size == 5)
+	else if (a->size == 5)
 		sort5(a, b);
 	else
 		push_percentile(a, b);
+	print_stack(a);
 	return (0);
 }

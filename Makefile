@@ -24,6 +24,7 @@ SRCS	=	./array.c\
 				./sort5.c\
 				./stack.c\
 				./swap.c\
+				./test_fct.c\
 
 OBJS 	=	${SRCS:.c=.o}
 

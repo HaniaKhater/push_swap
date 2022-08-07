@@ -27,20 +27,18 @@ t_node	*create_node(int nb)
 
 void	add_node_back(t_stack *s, int nb)
 {
-	t_node	*tmp;
 	t_node	*new;
 
 	new = create_node(nb);
 	if (s->head)
 	{
-		tmp = s->head;
-		while (tmp->next)
-			tmp = tmp->next;
-		tmp->next = new;
-		new->next = NULL; 
+		s->tail->next = new; 
 		s->tail = new;
 	}
 	else
+	{
 		s->head = new;
+		s->tail = new;
+	}
 	s->size++;
 }

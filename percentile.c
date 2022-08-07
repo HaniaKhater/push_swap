@@ -35,6 +35,6 @@ void            push_percentile(t_stack *a, t_stack *b)
             else
                 call("ra", a, b);
         }
-        push_max(a, b);
     }
+    push_max(a, b);
 }
