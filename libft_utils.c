@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft_utils.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hkhater <hkhater@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/07 23:52:50 by hkhater           #+#    #+#             */
+/*   Updated: 2022/08/07 23:53:39 by hkhater          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 long long	ft_atoll(const char *str)
 {
-	int		i;
-	int		sign;
+	int			i;
+	int			sign;
 	long long	nb;
 
 	i = 0;
@@ -49,7 +61,7 @@ static int	ft_strlen(char *str)
 	i = 0;
 	while (str[i])
 		i++;
-	return i;
+	return (i);
 }
 
 void	ft_putstr(char *str)

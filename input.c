@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   input.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hkhater <hkhater@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/08 00:27:10 by hkhater           #+#    #+#             */
+/*   Updated: 2022/08/08 00:34:21 by hkhater          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 static int	only_nbs(char **av)
@@ -9,12 +21,11 @@ static int	only_nbs(char **av)
 	i = 0;
 	while (av[++i])
 	{
-		j =-1;
+		j = -1;
 		while (av[i][++j])
 		{
 			c = av[i][j];
-			if (!(c >= '0' && c <= '9') &&
-				c != '-' && c != ' ')
+			if (!(c >= '0' && c <= '9') && c != '-' && c != ' ')
 				return (0);
 		}
 	}
@@ -23,7 +34,7 @@ static int	only_nbs(char **av)
 
 static t_stack	*fill_stack(char **argv)
 {
-	int		i;
+	int			i;
 	long long	tmp;
 	t_stack		*a;
 
@@ -43,7 +54,7 @@ static int	has_duplicate(t_stack *s)
 {
 	t_node	*tmp;
 	t_node	*current;
-	int	occurences;
+	int		occurences;
 
 	current = s->head;
 	while (current)
@@ -63,12 +74,12 @@ static int	has_duplicate(t_stack *s)
 	return (0);
 }
 
-t_stack		*parse_input(char **input)
+//maybe handle ac==2 with strsplit for double quotes
+
+t_stack	*parse_input(char **input)
 {
 	t_stack	*a;
 
-	//maybe handle argv == 2 seperately -> strsplit(input[0], ' ')
-	// maybe transfer input into rwx char ** & free it if not == input 
 	if (!(only_nbs(input)))
 	{
 		ft_putstr("not only numbers");

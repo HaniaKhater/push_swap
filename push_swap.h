@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hkhater <hkhater@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/07 23:54:55 by hkhater           #+#    #+#             */
+/*   Updated: 2022/08/07 23:54:58 by hkhater          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
@@ -16,7 +28,6 @@ typedef struct s_stack
 	t_node	*tail;
 	int		size;
 }		t_stack;
-
 
 int			is_sorted(t_stack *s);
 /*
@@ -75,7 +86,7 @@ void		push_max(t_stack *a, t_stack *b);
 
 //DELETE
 
-void	ft_putnbr_fd(int n, int fd);
-void    print_stack(t_stack *s);
+void		ft_putnbr_fd(int n, int fd);
+void		print_stack(t_stack *s);
 
 #endif

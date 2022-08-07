@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   stack.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hkhater <hkhater@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/07 23:56:26 by hkhater           #+#    #+#             */
+/*   Updated: 2022/08/07 23:56:32 by hkhater          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 t_stack	*create_stack(void)
@@ -32,7 +44,7 @@ void	add_node_back(t_stack *s, int nb)
 	new = create_node(nb);
 	if (s->head)
 	{
-		s->tail->next = new; 
+		s->tail->next = new;
 		s->tail = new;
 	}
 	else
