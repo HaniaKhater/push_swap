@@ -88,5 +88,6 @@ void		push_max(t_stack *a, t_stack *b);
 
 void		ft_putnbr_fd(int n, int fd);
 void		print_stack(t_stack *s);
+void		print_array(int	*arr);
 
 #endif

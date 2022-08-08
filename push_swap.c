@@ -28,7 +28,6 @@ int	main(int argc, char **argv)
 	b = create_stack();
 	if (!b)
 		return (0);
-	print_stack(a);
 	if (a->size == 2)
 		call("sa", a, b);
 	else if (a->size == 3)
@@ -38,5 +37,6 @@ int	main(int argc, char **argv)
 	else
 		push_percentile(a, b);
 	print_stack(a);
+	//free stack
 	return (0);
 }
