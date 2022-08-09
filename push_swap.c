@@ -21,10 +21,7 @@ int	main(int argc, char **argv)
 		return (0);
 	a = parse_input(&argv[1]);
 	if (a->size == 1 || is_sorted(a))
-	{
-		ft_putstr("size 1 or is sorted");
 		return (0);
-	}
 	b = create_stack();
 	if (!b)
 		return (0);
@@ -35,8 +32,12 @@ int	main(int argc, char **argv)
 	else if (a->size == 5)
 		sort5(a, b);
 	else
+	{
 		push_percentile(a, b);
-	print_stack(a);
+		push_max(a, b);
+	}
 	//free stack
+	free(a);
+	free(b);
 	return (0);
 }

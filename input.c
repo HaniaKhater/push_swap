@@ -74,22 +74,14 @@ static int	has_duplicate(t_stack *s)
 	return (0);
 }
 
-//maybe handle ac==2 with strsplit for double quotes
-
 t_stack	*parse_input(char **input)
 {
 	t_stack	*a;
 
 	if (!(only_nbs(input)))
-	{
-		ft_putstr("not only numbers");
 		error();
-	}
 	a = fill_stack(input);
 	if (!a || has_duplicate(a))
-	{
-		ft_putstr("no a or has duplicates");
 		error();
-	}
 	return (a);
 }

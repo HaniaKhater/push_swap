@@ -36,6 +36,7 @@ int			is_sorted(t_stack *s);
 
 t_stack		*create_stack(void);
 void		add_node_back(t_stack *s, int nb);
+void		free_stack(t_stack *s);
 
 /*
 **	input.c
