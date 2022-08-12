@@ -14,16 +14,17 @@
 
 void	rrotate(t_stack *s)
 {
-	t_node	*sc_last;
+	t_node	*tmp;
 
 	if (!s || !s->head || !s->head->next)
 		return ;
-	sc_last = s->head;
-	while (sc_last->next->next)
-		sc_last = sc_last->next;
+	tmp = s->head;
+	while (tmp->next->next)
+		tmp = tmp->next;
+	tmp->next = NULL;
 	s->tail->next = s->head;
 	s->head = s->tail;
-	s->tail = sc_last;
+	s->tail = tmp;
 }
 
 void	rrr(t_stack *a, t_stack *b)

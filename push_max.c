@@ -15,15 +15,15 @@
 static void	put_max_top(t_stack *a, t_stack *b, int max)
 {
 	int	pos;
-	int mid;
+	int	mid;
 	int	i;
 
 	pos = find_position(max, b);
 	mid = b->size / 2;
 	ft_putnbr_fd(pos, 1);
-	ft_putstr(" is the position of max\n");
+	ft_putstr(" : position of max\n");
 	ft_putnbr_fd(mid, 1);
-	ft_putstr(" is the middle position\n");
+	ft_putstr(" : middle position\n");
 	if (pos == 1)
 		return ;
 	else if (pos > mid && pos > 2)
@@ -44,7 +44,6 @@ static void	put_max_top(t_stack *a, t_stack *b, int max)
 			i++;
 		}
 	}
-	ft_putstr("Max is now on top\n");
 }
 
 void	push_max(t_stack *a, t_stack *b)
@@ -60,8 +59,11 @@ void	push_max(t_stack *a, t_stack *b)
 		call("pa", a, b);
 		ft_putstr("Satck A:\t");
 		print_stack(a);
-		ft_putstr("\nSatck b:\t");
-		print_stack(b);
+		if (b->head->nb)
+		{
+			ft_putstr("\nSatck b:\t");
+			print_stack(b);
+		}
 		ft_putstr("\n");
 	}
 }

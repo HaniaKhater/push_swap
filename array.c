@@ -20,7 +20,7 @@ int	*fill_array(t_stack *s)
 
 	i = 0;
 	tmp = s->head;
-	arr = malloc(sizeof(int) * s->size + 1);
+	arr = malloc(sizeof(int) * (s->size + 1));
 	if (!arr)
 		return (NULL);
 	while (tmp->next)

@@ -20,7 +20,7 @@ void	rotate(t_stack *s)
 		return ;
 	tmp = s->head;
 	s->head = s->head->next;
-	tmp->next = s->tail->next;
+	tmp->next = NULL;
 	s->tail->next = tmp;
 	s->tail = tmp;
 }

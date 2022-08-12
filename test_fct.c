@@ -27,6 +27,9 @@ void    print_stack(t_stack *s)
 		write(1, " ", 1);
         tmp = tmp->next;
     }
-    ft_putnbr_fd(tmp->nb, 1);
-	write(1, " ", 1);
+	if (tmp->nb)
+	{
+    	ft_putnbr_fd(tmp->nb, 1);
+		write(1, " ", 1);
+	}
 }
