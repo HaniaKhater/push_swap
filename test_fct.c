@@ -20,6 +20,9 @@ void	ft_putnbr_fd(int n, int fd)
 void    print_stack(t_stack *s)
 {
     t_node  *tmp;
+
+	if (!s)
+		return ;
     tmp = s->head;
     while (tmp->next)
     {

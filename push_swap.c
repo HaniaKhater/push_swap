@@ -36,7 +36,10 @@ int	main(int argc, char **argv)
 		push_percentile(a, b);
 		push_max(a, b);
 	}
+	print_stack(a);
 	free_stack(a);
 	free_stack(b);
+	free(a);
+	free(b);
 	return (0);
 }

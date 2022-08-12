@@ -50,20 +50,12 @@ void	push_max(t_stack *a, t_stack *b)
 {
 	int	max;
 
-	while (b->size != 0)
+	while (b->head)
 	{
 		max = find_max(b);
 		ft_putnbr_fd(max, 1);
 		ft_putstr(" is the max\n");
 		put_max_top(a, b, max);
 		call("pa", a, b);
-		ft_putstr("Satck A:\t");
-		print_stack(a);
-		if (b->head->nb)
-		{
-			ft_putstr("\nSatck b:\t");
-			print_stack(b);
-		}
-		ft_putstr("\n");
 	}
 }

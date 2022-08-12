@@ -57,7 +57,7 @@ void	add_node_back(t_stack *s, int nb)
 
 void	free_stack(t_stack *s)
 {
-	t_node *tmp;
+	t_node	*tmp;
 
 	while (s->head)
 	{

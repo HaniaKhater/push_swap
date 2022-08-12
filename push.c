@@ -22,6 +22,7 @@ void	push(t_stack *src, t_stack *dst)
 	src->head = src->head->next;
 	tmp->next = dst->head;
 	dst->head = tmp;
+	dst->tail = dst->head;
 	src->size--;
 	dst->size++;
 	if (src->size == 0)
@@ -30,4 +31,3 @@ void	push(t_stack *src, t_stack *dst)
 		src->tail = NULL;
 	}
 }
-// dst->tail = dst->head?? or not necessary?
