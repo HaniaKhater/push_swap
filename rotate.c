@@ -16,11 +16,6 @@ void	rotate(t_stack *s)
 {
 	t_node	*tmp;
 
-	if (s)
-	{
-		print_stack(s);
-		ft_putstr(" Stack before rb\n");
-	}
 	if (!s || !s->head || !s->head->next)
 		return ;
 	tmp = s->head;
@@ -30,11 +25,6 @@ void	rotate(t_stack *s)
 	ft_putstr("tail \n");
 	s->tail->next = tmp;
 	s->tail = tmp;
-	if (s)
-	{
-		print_stack(s);
-		ft_putstr(" Stack after rb\n");
-	}
 }
 
 void	rr(t_stack *a, t_stack *b)

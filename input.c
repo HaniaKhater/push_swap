@@ -81,7 +81,15 @@ t_stack	*parse_input(char **input)
 	if (!(only_nbs(input)))
 		error();
 	a = fill_stack(input);
-	if (!a || has_duplicate(a))
+	if (!a)
 		error();
+	if (has_duplicate(a))
+	{
+		if (a->head)
+			free_stack(a);
+		if (a)
+			free(a);
+		error();
+	}
 	return (a);
 }
