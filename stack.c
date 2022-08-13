@@ -66,3 +66,11 @@ void	free_stack(t_stack *s)
 		free(tmp);
 	}
 }
+
+void	safe_free(t_stack *a, t_stack *b)
+{
+	free_stack(a);
+	free_stack(b);
+	free(a);
+	free(b);
+}
