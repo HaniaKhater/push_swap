@@ -25,6 +25,10 @@ void	push(t_stack *src, t_stack *dst)
 	dst->tail = dst->head;
 	src->size--;
 	dst->size++;
+	ft_putnbr_fd(src->size, 1);
+	ft_putstr(" size of src\n");
+	ft_putnbr_fd(dst->size, 1);
+	ft_putstr(" size of dst\n");
 	if (src->size == 0)
 	{
 		src->head = NULL;

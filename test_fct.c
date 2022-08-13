@@ -21,7 +21,7 @@ void    print_stack(t_stack *s)
 {
     t_node  *tmp;
 
-	if (!s)
+	if (!s || !s->head)
 		return ;
     tmp = s->head;
     while (tmp->next)
@@ -33,6 +33,6 @@ void    print_stack(t_stack *s)
 	if (tmp->nb)
 	{
     	ft_putnbr_fd(tmp->nb, 1);
-		write(1, " ", 1);
+		write(1, "\n", 1);
 	}
 }

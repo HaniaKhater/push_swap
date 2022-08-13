@@ -37,6 +37,7 @@ int	main(int argc, char **argv)
 		push_max(a, b);
 	}
 	print_stack(a);
+	ft_putstr(" Stack A\n");
 	free_stack(a);
 	free_stack(b);
 	free(a);

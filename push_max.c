@@ -28,6 +28,7 @@ static void	put_max_top(t_stack *a, t_stack *b, int max)
 		return ;
 	else if (pos > mid && pos > 2)
 	{
+		ft_putstr("position > mid\n");
 		i = 0;
 		while (i >= 0)
 		{
@@ -37,12 +38,28 @@ static void	put_max_top(t_stack *a, t_stack *b, int max)
 	}
 	else
 	{
+		ft_putstr("position NOT > mid\n");
 		i = 0;
 		while (i < pos - 1)
 		{
 			call("rb", a, b);
 			i++;
+			if (b)
+			{
+				print_stack(b);
+				ft_putstr(" Stack B\n");
+			}
+			if (a)
+			{
+				print_stack(a);
+				ft_putstr(" Stack A\n");
+			}
 		}
+	}
+	if (b)
+	{
+		print_stack(b);
+		ft_putstr(" Stack B After\n");
 	}
 }
 
@@ -50,12 +67,19 @@ void	push_max(t_stack *a, t_stack *b)
 {
 	int	max;
 
-	while (b->head)
+	while (b->size)
 	{
+		ft_putnbr_fd(b->head->nb, 1);
+		ft_putstr(" is b->head\n");
 		max = find_max(b);
 		ft_putnbr_fd(max, 1);
 		ft_putstr(" is the max\n");
 		put_max_top(a, b, max);
 		call("pa", a, b);
+		if (b)
+		{
+			print_stack(b);
+			ft_putstr(" Stack B\n");
+		}
 	}
 }
