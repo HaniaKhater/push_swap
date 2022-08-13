@@ -41,11 +41,7 @@ void	push_percentile(t_stack *a, t_stack *b)
 		while (a->size)
 		{
 			if (a->head->nb <= cutoff)
-			{
-				ft_putnbr_fd(a->head->nb, 1);
-				ft_putstr(" is small enough\n");
 				call("pb", a, b);
-			}
 			else
 			{
 				call("ra", a, b);
