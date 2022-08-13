@@ -43,7 +43,7 @@ static t_stack	*fill_stack(char **argv)
 	while (argv[++i])
 	{
 		tmp = ft_atoll(argv[i]);
-		if (tmp < -247483648 || tmp > 247483647)
+		if (tmp < -2147483648 || tmp > 2147483647)
 			error();
 		add_node_back(a, (int)tmp);
 	}

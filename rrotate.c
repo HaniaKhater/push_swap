@@ -15,7 +15,6 @@
 void	rrotate(t_stack *s)
 {
 	t_node	*tmp;
-
 	if (!s || !s->head || !s->head->next)
 		return ;
 	tmp = s->head;

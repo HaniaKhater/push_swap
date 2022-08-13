@@ -36,3 +36,19 @@ void    print_stack(t_stack *s)
 		write(1, "\n", 1);
 	}
 }
+
+void	print2stacks(t_stack *a, t_stack *b)
+{
+	if (a)
+	{
+		ft_putstr("Stack A ---> ");
+		print_stack(a);
+		ft_putstr("\n");
+	}
+	if (a)
+	{
+		ft_putstr("Stack B ---> ");
+		print_stack(b);
+		ft_putstr("\n");
+	}
+}

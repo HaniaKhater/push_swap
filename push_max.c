@@ -52,22 +52,11 @@ void	push_max(t_stack *a, t_stack *b)
 
 	while (b->size)
 	{
-		ft_putnbr_fd(b->head->nb, 1);
-		ft_putstr(" is b->head\n");
 		max = find_max(b);
 		ft_putnbr_fd(max, 1);
 		ft_putstr(" is the max\n");
 		put_max_top(a, b, max);
+		ft_putnbr_fd(b->head->nb, 1);
 		call("pa", a, b);
-		if (a)
-		{
-			ft_putstr(" Stack A ---> ");
-			print_stack(a);
-		}
-		if (b)
-		{
-			ft_putstr(" Stack B ---> ");
-			print_stack(b);
-		}
 	}
 }

@@ -38,9 +38,6 @@ void	push_percentile(t_stack *a, t_stack *b)
 	while (a->head)
 	{
 		cutoff = find_cutoff(a);
-		ft_putstr("cutoff point is: ");
-		ft_putnbr_fd(cutoff, 1);
-		ft_putstr("\n");
 		while (a->size)
 		{
 			if (a->head->nb <= cutoff)
@@ -51,8 +48,6 @@ void	push_percentile(t_stack *a, t_stack *b)
 			}
 			else
 			{
-				ft_putnbr_fd(a->head->nb, 1);
-				ft_putstr(" is not small enough\n");
 				call("ra", a, b);
 				break ;
 			}

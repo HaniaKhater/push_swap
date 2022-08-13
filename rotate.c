@@ -21,8 +21,6 @@ void	rotate(t_stack *s)
 	tmp = s->head;
 	s->head = s->head->next;
 	tmp->next = NULL;
-	ft_putnbr_fd(s->tail->nb, 1);
-	ft_putstr("tail \n");
 	s->tail->next = tmp;
 	s->tail = tmp;
 }

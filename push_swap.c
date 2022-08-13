@@ -20,11 +20,19 @@ int	main(int argc, char **argv)
 	if (argc == 1)
 		return (0);
 	a = parse_input(&argv[1]);
+	//print2stacks(a, NULL);
 	if (a->size == 1 || is_sorted(a))
+	{
+		if (a->head)
+			free_stack(a);
+		if (a)
+			free(a);
 		return (0);
+	}
 	b = create_stack();
 	if (!b)
 		return (0);
+	//print2stacks(a, b);
 	if (a->size == 2)
 		call("sa", a, b);
 	else if (a->size == 3)
@@ -34,8 +42,10 @@ int	main(int argc, char **argv)
 	else
 	{
 		push_percentile(a, b);
+		print2stacks(a, b);
 		push_max(a, b);
 	}
+	print2stacks(a, b);
 	free_stack(a);
 	free_stack(b);
 	free(a);
