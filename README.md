@@ -17,11 +17,11 @@ This is an implementation of the push swap sorting algorithm in C for the 42 Sch
 The program should output a list of instructions that can be used to sort the input list using the above operations.
 
 ## Installation
-...
-git clone https://github.com/HaniaKhater/push_swap.git
-cd push_swap
-make
-...
+
+`git clone https://github.com/HaniaKhater/push_swap.git`<br>
+`cd push_swap`<br>
+`make`<br>
+
 
 ## Usage
 
