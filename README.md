@@ -36,11 +36,11 @@ The program will output the list of instructions that can be used to sort the in
 
 ## Implementation
 
-The program uses two stacks, stack A and stack B, to sort the input list. The algorithm has two phases: the first phase consists of pushing a part of the input list to stack B in a way that stack B is sorted in descending order. The second phase consists of pushing the elements back to stack A in ascending order using stack B as an intermediary.
+The program uses two stacks, stack A and stack B, to sort the input list. The algorithm has two phases: the first phase consists of pushing a part of the input list to stack B in a way that stack B is almost sorted in descending order. The second phase consists of pushing the elements back to stack A in ascending order using stack B as an intermediary.
 
 ### Phase 1
 
-1. The program starts by finding the median value of the input list.
+1. The program starts by finding the cutoff value of the input list.
 2. It then pushes all values greater than or equal to the median to stack B, and all values less than the median to stack A.
 3. It then repeats step 1 and 2 for the remaining unsorted parts of the input list until all values are on stack B and the stack is almost sorted in descending order.
 
